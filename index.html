@@ -8,6 +8,24 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div id="btn-calendar">View Calendar</div>
+    <button id="show-btn" class="btn">View Calendar</button>
+
+    <div class="popout-bg">
+      <div class="popout" id="calendar">
+        <h2 id="month-name"></h2>
+        <!-- <span class="btn">&lt;</span> -->
+        <!-- <span class="btn">&gt;</span> -->
+        <div class="calendar-grid">
+          <div class="cal-grid-card cal-grid-header">Sun</div>
+          <div class="cal-grid-card cal-grid-header">Mon</div>
+          <div class="cal-grid-card cal-grid-header">Tue</div>
+          <div class="cal-grid-card cal-grid-header">Wed</div>
+          <div class="cal-grid-card cal-grid-header">Thr</div>
+          <div class="cal-grid-card cal-grid-header">Fri</div>
+          <div class="cal-grid-card cal-grid-header">Sat</div>
+        </div>
+        <button id="hide-btn" class="btn">Close</button>
+      </div>
+    </div>
   </body>
 </html>
