@@ -9,7 +9,7 @@
 .btn {
   margin: 0.5rem;
   padding: 0.75rem;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   border-radius: 1rem;
 
   border: 2px solid transparent;
@@ -46,29 +46,61 @@
   display: grid;
   grid-template: auto 1fr auto / auto;
   background-color: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
   row-gap: 1rem;
+  max-width: 100%;
 }
 
 .popout .btn {
   padding: 0.5rem;
 }
 
+.calendar-header {
+  display: grid;
+  grid-template: auto auto / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "name name name name name prev next"
+    "Sun Mon Tue Wed Thr Fri Sat";
+  gap: 0.5rem;
+}
+
+.month-name {
+  grid-area: name;
+  text-justify: center;
+}
+
+.prev-btn {
+  grid-area: prev;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.next-btn {
+  grid-area: next;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
 .calendar-grid {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0.5rem;
+  width: 100%;
 }
 
-.cal-grid-card {
+.cal-grid-date {
   padding: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
 }
 
-.cal-grid-header {
+.cal-grid-day {
   background-color: lightgray;
 }
